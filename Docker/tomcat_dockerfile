@@ -1,5 +1,5 @@
-FROM centos:7
-RUN yum install java -y
+FROM rockylinux/rockylinux:8
+RUN yum install -y java-1.8.0-openjdk wget
 RUN mkdir /opt/tomcat/
 WORKDIR /opt/tomcat
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.104/bin/apache-tomcat-9.0.104.tar.gz /opt/tomcat
